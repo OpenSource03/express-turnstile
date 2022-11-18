@@ -1,10 +1,10 @@
 {
   "name": "express-turnstile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Express middleware for CloudFlare Turnstile Captcha",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "type": "module",
+  "type": "commonjs",
   "files": [
     "lib/**/*"
   ],

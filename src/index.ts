@@ -54,6 +54,6 @@ const validate =
       });
   };
 
-export const middleware = {
+export const turnstile = {
   validate,
 };
