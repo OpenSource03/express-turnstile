@@ -1,7 +1,9 @@
 # express-turnstile
-Validate your Turnstile token using a Express middleware.
+
+Validate your CloudFlare Turnstile token using a Express middleware.
 
 ## Usage
+
 ```
 yarn add express-turnstile
 ```
@@ -14,14 +16,17 @@ const { turnstile } = require("express-turnstile");
 
 const app = express();
 
-app.post('/verify', turnstile.validate(process.env.TURNSTILE_SECRET), (req, res) => {
-  res.json({message: 'verified!'});
-});
+app.post(
+  "/verify",
+  turnstile.validate(process.env.TURNSTILE_SECRET),
+  (req, res) => {
+    res.json({ message: "verified!" });
+  }
+);
 
 app.listen(3000, () => {
   console.log("Server started on port 3000");
 });
-
 ```
 
 Or as module
@@ -43,4 +48,4 @@ app.post(
 app.listen(3000, () => {
   console.log("Server started on port 3000");
 });
-
+```
